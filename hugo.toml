@@ -1,4 +1,4 @@
-baseURL = 'http://127.0.0.1：1313/'
+baseURL = 'https://geekhuashan.github.io/geekhuashan-blog/'
 languageCode = 'en-us'
 title = '理科生的读书随想'
 theme = "PaperMod"
