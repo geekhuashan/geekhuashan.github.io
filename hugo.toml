@@ -1,4 +1,6 @@
 baseURL = 'https://geekhuashan.github.io/geekhuashan-blog/'
 languageCode = 'en-us'
 title = '理科生的读书随想'
-theme = "book"
+theme = "PaperMod"
+
+
