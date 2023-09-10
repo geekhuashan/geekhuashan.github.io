@@ -1,6 +1,182 @@
 baseURL = 'https://geekhuashan.github.io/geekhuashan-blog/'
-languageCode = 'en-us'
+languageCode = 'zh'
 title = '理科生的读书随想'
 theme = "PaperMod"
 
+hasCJKLanguage = true
+enableInlineShortcodes = true
+enableEmoji = true
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+pygmentsUseClasses = true
+defaultContentLanguage = "zh"
+defaultContentLanguageInSubdir = false
+
+[minify]
+disableXML = true
+
+[permalinks]
+post = "/:title/"
+
+[languages.zh]
+languageName = "Chinese"
+weight = 1
+
+  [languages.zh.profileMode]
+  enabled = true
+  title = "独立之精神，自由之思想"
+  subtitle = "👏🏼欢迎光临寒舍</br>👇联系方式"
+  imageUrl = "img/logo.gif"
+  imageWidth = 150
+  imageHeight = 150
+
+    [[languages.zh.profileMode.buttons]]
+    name = "👨🏻‍💻技术"
+    url = "posts/tech"
+
+    [[languages.zh.profileMode.buttons]]
+    name = "📕阅读"
+    url = "posts/read"
+
+    [[languages.zh.profileMode.buttons]]
+    name = "🏖生活"
+    url = "posts/life"
+
+[[languages.zh.menu.main]]
+identifier = "search"
+name = "🔍搜索"
+url = "search"
+weight = 1
+
+[[languages.zh.menu.main]]
+identifier = "home"
+name = "🏠主页"
+url = "/"
+weight = 2
+
+[[languages.zh.menu.main]]
+identifier = "posts"
+name = "📚文章"
+url = "/posts"
+weight = 3
+
+[[languages.zh.menu.main]]
+identifier = "archives"
+name = "⏱时间轴"
+url = "/archives"
+weight = 20
+
+[[languages.zh.menu.main]]
+identifier = "tags"
+name = "🔖标签"
+url = "/tags"
+weight = 40
+
+[[languages.zh.menu.main]]
+identifier = "about"
+name = "🙋🏻‍♂️关于"
+url = "/about"
+weight = 50
+
+[outputs]
+home = [ "HTML", "RSS", "JSON" ]
+
+[params]
+env = "production"
+description = "这是一个纯粹的博客......"
+author = "geekhuashan"
+defaultTheme = "auto"
+disableThemeToggle = false
+DateFormat = "2006-01-02"
+ShowShareButtons = true
+ShowReadingTime = true
+displayFullLangName = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+hideFooter = false
+ShowWordCounts = true
+VisitCount = true
+ShowLastMod = true
+ShowToc = true
+TocOpen = true
+comments = true
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/geekhuashan"
+
+  [[params.socialIcons]]
+  name = "bilibili"
+  url = "https://space.bilibili.com/309531586"
+
+  [[params.socialIcons]]
+  name = "QQ"
+  url = "img/qq.jpg"
+
+  [[params.socialIcons]]
+  name = "email"
+  url = "mailto:shaohan.tian@foxmail.com"
+
+  [[params.socialIcons]]
+  name = "RSS"
+  url = "index.xml"
+
+  [params.assets]
+  favicon = "img/logo.gif"
+  favicon16x16 = "img/logo.gif"
+  favicon32x32 = "img/logo.gif"
+  apple_touch_icon = "logo.gif"
+  safari_pinned_tab = "logo.gif"
+
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1_000
+  threshold = 1
+  minMatchCharLength = 0
+  keys = [ "title", "permalink", "summary" ]
+
+  [params.twikoo]
+  version = "1.4.11"
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+codeFences = true
+guessSyntax = true
+lineNos = true
+style = "darcula"
+
+[privacy.vimeo]
+disabled = false
+simple = true
+
+[privacy.twitter]
+disabled = false
+enableDNT = true
+simple = true
+
+[privacy.instagram]
+disabled = false
+simple = true
+
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
+
+[services.instagram]
+disableInlineCSS = true
+
+[services.twitter]
+disableInlineCSS = true
 
