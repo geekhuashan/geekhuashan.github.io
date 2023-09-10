@@ -112,13 +112,11 @@ comments = true
   name = "bilibili"
   url = "https://space.bilibili.com/309531586"
 
-  [[params.socialIcons]]
-  name = "QQ"
-  url = "img/qq.jpg"
+
 
   [[params.socialIcons]]
   name = "email"
-  url = "mailto:shaohan.tian@foxmail.com"
+  url = "mailto:geekhuashan@gmail.com"
 
   [[params.socialIcons]]
   name = "RSS"
