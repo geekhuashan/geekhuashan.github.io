@@ -66,11 +66,6 @@ name = "⏱时间轴"
 url = "/archives"
 weight = 20
 
-[[languages.zh.menu.main]]
-identifier = "tags"
-name = "🔖标签"
-url = "/tags"
-weight = 40
 
 [[languages.zh.menu.main]]
 identifier = "about"
