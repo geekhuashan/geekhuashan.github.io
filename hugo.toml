@@ -1,6 +1,6 @@
 baseURL = 'https://geekhuashan.github.io/geekhuashan-blog/'
 languageCode = 'zh'
-title = '理科生的读书随想'
+title = '理科生的生活随想 '
 theme = "PaperMod"
 
 hasCJKLanguage = true
@@ -26,8 +26,6 @@ weight = 1
 
   [languages.zh.profileMode]
   enabled = true
-  title = "独立之精神，自由之思想"
-  subtitle = "👏🏼欢迎光临寒舍</br>👇联系方式"
   imageUrl = "img/logo.gif"
   imageWidth = 150
   imageHeight = 150
