@@ -54,6 +54,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .active {
     font-size: 110%;
     font-weight: 600;
+    text-decoration: underline
 }
 
 .toc ul {
