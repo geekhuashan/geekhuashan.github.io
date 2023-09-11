@@ -44,7 +44,6 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 .toc details[open] summary {
     font-weight: 500;
-    text-decoration: underline;
 }
 
 .toc-container.wide .toc .inner {
@@ -54,7 +53,8 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 .active {
     font-size: 110%;
     font-weight: 600;
-    text-decoration: underline;
+    border-bottom: 1px solid; // 使用 border-bottom 替代 text-decoration
+    padding-bottom: 2px; // 调整下划线与文字的距离
 }
 
 .toc ul {
