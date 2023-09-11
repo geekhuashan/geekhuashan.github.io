@@ -1,7 +1,7 @@
 +++
 title = 'Atomic Habits 读后感'
 date = 2023-09-08T23:59:47+08:00
-weight = 1
+weight = 2
 draft = false
 +++
 
