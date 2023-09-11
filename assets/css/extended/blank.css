@@ -4,7 +4,7 @@ This is just a placeholder blank stylesheet so as to support adding custom style
 Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
 */
 :root {
-    --nav-width: 1380px;
+    --nav-width: 1580px;
     --article-width: 800px;
     --toc-width: 300px;
 }
