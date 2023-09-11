@@ -1,4 +1,4 @@
-baseURL = 'https://geekhuashan.github.io/geekhuashan-blog/'
+baseURL = 'https://geekhuashan.github.io'
 languageCode = 'zh'
 title = '理科生的生活随想 '
 theme = "PaperMod"
