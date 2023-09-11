@@ -44,6 +44,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
 
 .toc details[open] summary {
     font-weight: 500;
+    text-decoration: underline
 }
 
 .toc-container.wide .toc .inner {
