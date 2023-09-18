@@ -2,17 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://127.0.0.1%EF%BC%9A1313/post/atomic-habits-%E8%AF%BB%E5%90%8E%E6%84%9F/</loc>
+    <loc>https://geekhuashan.github.io/posts/tech/self_introduction/</loc>
+    <lastmod>2023-09-11T23:00:47+08:00</lastmod>
+  </url><url>
+    <loc>https://geekhuashan.github.io/posts/life/2023-09-11/</loc>
+    <lastmod>2023-09-11T11:59:47+08:00</lastmod>
+  </url><url>
+    <loc>https://geekhuashan.github.io/posts/read/%E7%9D%A1%E7%9C%A0/</loc>
     <lastmod>2023-09-08T23:59:47+08:00</lastmod>
   </url><url>
-    <loc>http://127.0.0.1%EF%BC%9A1313/post/</loc>
+    <loc>https://geekhuashan.github.io/posts/tech/2023-08-team-meeting-presentation/</loc>
+    <lastmod>2023-09-11T23:00:47+08:00</lastmod>
+  </url><url>
+    <loc>https://geekhuashan.github.io/posts/read/atomic-habits-%E8%AF%BB%E5%90%8E%E6%84%9F/</loc>
     <lastmod>2023-09-08T23:59:47+08:00</lastmod>
   </url><url>
-    <loc>http://127.0.0.1%EF%BC%9A1313/</loc>
-    <lastmod>2023-09-08T23:59:47+08:00</lastmod>
+    <loc>https://geekhuashan.github.io/posts/tech/</loc>
+    <lastmod>2023-09-11T23:00:47+08:00</lastmod>
   </url><url>
-    <loc>http://127.0.0.1%EF%BC%9A1313/categories/</loc>
+    <loc>https://geekhuashan.github.io/posts/</loc>
+    <lastmod>2023-09-11T23:00:47+08:00</lastmod>
   </url><url>
-    <loc>http://127.0.0.1%EF%BC%9A1313/tags/</loc>
+    <loc>https://geekhuashan.github.io/</loc>
+    <lastmod>2023-09-11T23:00:47+08:00</lastmod>
+  </url><url>
+    <loc>https://geekhuashan.github.io/posts/life/</loc>
+    <lastmod>2023-09-11T11:59:47+08:00</lastmod>
+  </url><url>
+    <loc>https://geekhuashan.github.io/posts/read/</loc>
+    <lastmod>2023-09-10T00:07:01+08:00</lastmod>
+  </url><url>
+    <loc>https://geekhuashan.github.io/posts/read/getting-things-done/</loc>
+    <lastmod>2023-09-10T00:07:01+08:00</lastmod>
+  </url><url>
+    <loc>https://geekhuashan.github.io/archives/</loc>
+  </url><url>
+    <loc>https://geekhuashan.github.io/search/</loc>
+  </url><url>
+    <loc>https://geekhuashan.github.io/about/</loc>
+  </url><url>
+    <loc>https://geekhuashan.github.io/categories/</loc>
+  </url><url>
+    <loc>https://geekhuashan.github.io/series/</loc>
+  </url><url>
+    <loc>https://geekhuashan.github.io/tags/</loc>
   </url>
 </urlset>

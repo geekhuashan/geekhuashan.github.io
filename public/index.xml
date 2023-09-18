@@ -1,26 +1,93 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>理科生的读书随想</title>
-    <link>http://127.0.0.1%EF%BC%9A1313/</link>
-    <description>Recent content on 理科生的读书随想</description>
+    <title>理科生的生活随想 </title>
+    <link>https://geekhuashan.github.io/</link>
+    <description>Recent content on 理科生的生活随想 </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 08 Sep 2023 23:59:47 +0800</lastBuildDate><atom:link href="http://127.0.0.1%EF%BC%9A1313/index.xml" rel="self" type="application/rss+xml" />
+    <language>zh</language>
+    <lastBuildDate>Mon, 11 Sep 2023 23:00:47 +0800</lastBuildDate><atom:link href="https://geekhuashan.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Atomic Habits 读后感</title>
-      <link>http://127.0.0.1%EF%BC%9A1313/post/atomic-habits-%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
+      <title>Self introduction for job interview - 2023-09</title>
+      <link>https://geekhuashan.github.io/posts/tech/self_introduction/</link>
+      <pubDate>Mon, 11 Sep 2023 23:00:47 +0800</pubDate>
+      
+      <guid>https://geekhuashan.github.io/posts/tech/self_introduction/</guid>
+      <description>Self introduction Good morning/afternoon, My name is Eric, and I am an chemist with a Master&amp;rsquo;s degree in Applied Chemistry from East China University of Science and Technology. I currently hold the position of Assistant Lab Manager &amp;amp; Senior Formulation Chemist at BASF. My expertise lies in both organic and physical chemistry, and my day-to-day responsibilities are diverse. I am responsible for the routine maintenance of laboratory equipment, ensuring the</description>
+    </item>
+    
+    <item>
+      <title>2023-09-11 日记</title>
+      <link>https://geekhuashan.github.io/posts/life/2023-09-11/</link>
+      <pubDate>Mon, 11 Sep 2023 11:59:47 +0800</pubDate>
+      
+      <guid>https://geekhuashan.github.io/posts/life/2023-09-11/</guid>
+      <description>生活 生活有时候就是充满了无奈，无奈的事情总是会发生，无奈的事情总是会让人感到疲惫，无奈的事情总是会让人感到无力，无奈的事情总是会让人感到无助</description>
+    </item>
+    
+    <item>
+      <title>睡眠</title>
+      <link>https://geekhuashan.github.io/posts/read/%E7%9D%A1%E7%9C%A0/</link>
       <pubDate>Fri, 08 Sep 2023 23:59:47 +0800</pubDate>
       
-      <guid>http://127.0.0.1%EF%BC%9A1313/post/atomic-habits-%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
-      <description>改变的契机 作为一个三十多的老父亲，在处理日常的工作和生活中，感到越来越力不从心了，总是觉得好疲惫，在Roam Research上记录的最多的Daily memo总是说自己好累好累，学习了很多关于精力管理的方法，也总是不能有效的坚持下去。 好习惯的养成在我这个年纪是特别需要的，意志力已经所剩无几，只能通过科学的方法去养成适合自身的习惯。而习惯是复利的，自己现在表现出来的状态就是之前所有习惯的反应。 通过学习atomic habits，我认识到了养成习惯需要通过合适的场景，和不断的激励慢慢形成。
-身份认同 要想养成好的习惯，先得知道习惯的重要性，习惯就是自己的{本能反应}。有了好的习惯，就可以不要过多思考的去完成一件件事情，减少了意志力的消耗。 形成习惯需要自己有着==身份认同==，而不仅仅是作为一个目标，目标实现之后会懈怠会空虚会不作为，而作为一个身份，则会伴随自己直到永远。 习惯可以帮忙实现目标，本质上来说，习惯会使你变成某种人，某个自己想成为的人。
-形成习惯的四个步骤 提示 Make it obvious/Make it invisible 让需要养成的好习惯，显而易见 填写习惯计分卡，能够更好的了解自己的习惯，为自己改善自己的{行为}有了目的性的改变 让好习惯的提示到处可见 应用习惯叠加原理，也能更好建立自己新习惯的开始 明确自己的执行细节，于何时，何地，进行何事，越详细，就越能成功的进行，养成习惯。
-渴求 Make it attractive/Make it unattractive 让需要养成的习惯{{变得有}}吸引力 利用喜好绑定，用自己喜好的行为强化需要进行的动作 加入相同的文化圈，比如说python小组，geek 小组，自动化小组，chemistry 小组 创建激励方式，在做非日常习惯之前先做一件自己很喜欢的事情
-反应 Make it easy/Make it difficult 减少阻力，减少养成好习惯的步骤 备好环境，创造一种有利于好习惯养成的环境 把握好决定时刻，优化可以产生重大影响的小选择 决定性时刻为你未来的自己设定了选择，如走进餐厅是一个决定性时刻，因为它决定了你午餐吃什么。这些小选择累计起来，每一个都为你如何度过下一段时间设定了轨迹
-利用两分钟原则，让习惯占用的时间少，让习惯先启动起来 自动化自己的习惯，在能帮助自己好行为的技术和物品上有所投入
-奖励 利用增强法，完成一套{习惯动作}后==立即==奖励自己 利用习惯追踪法，记录习惯，尽量不要中断 绝对不能连续错过两次，如果忘记做了，一定要尽快补救
-联系自身去建立习惯的措施 阅读的习惯 随手能拿到kindle 看好书之后可以浏览会Inoreader 记录自己的看书结果，习惯追踪，有热点图 - 类似于Github的图 每天可以只看3分钟 坚持完成~N个习惯/focus 就买一个自己在Wishlist喜欢的东西 锻炼的习惯 需要在客厅放好瑜伽垫，随时可以进行锻炼 锻炼的时候可以听听Clubhouse，或者看看剧。 记录自己的训练结果，习惯追踪，有热点图 - 类似于Github的图 每天只要锻炼3min即可，不苛求 坚持完成~N个习惯/focus 就买一个自己在Wishlist喜欢的东西 </description>
+      <guid>https://geekhuashan.github.io/posts/read/%E7%9D%A1%E7%9C%A0/</guid>
+      <description>昼夜节律 00:00 Midnight 02:00 Deepest sleep 04:30 Lowest body temperature 06:45 sharpest rise in blood pressure 07:30 Melatonin secretion stops 褪黑激素分泌停止 08:30 Bowel movement likely 肠道蠕动 09:00 Highest testosterone secretion 睾酮分泌最高 10:00 High alertness 14:30 Best coordination 15:30 Fastest reaction time 17:00 Greatest cardiovascular efficiency and muscle strength 心血管效</description>
+    </item>
+    
+    <item>
+      <title>Team Meeting Presentation 2023-08</title>
+      <link>https://geekhuashan.github.io/posts/tech/2023-08-team-meeting-presentation/</link>
+      <pubDate>Mon, 11 Sep 2023 23:00:47 +0800</pubDate>
+      
+      <guid>https://geekhuashan.github.io/posts/tech/2023-08-team-meeting-presentation/</guid>
+      <description>Page 1 Hello, everyone! Good afternoon, I&amp;rsquo;m glad to have this opportunity to introduce my work to you.
+My discussion today revolves around &amp;ldquo;High Throughput Formulation &amp;amp; Digitalization&amp;rdquo;. I will be outlining two projects that highlight the use of high throughput and digitalization in our work.
+Page 2 High Throughput Formulation Technologies refer to a collection of advanced methods and equipment that facilitate the rapid and efficient preparation and analysis of various formulations.</description>
+    </item>
+    
+    <item>
+      <title>Atomic Habits 读后感</title>
+      <link>https://geekhuashan.github.io/posts/read/atomic-habits-%E8%AF%BB%E5%90%8E%E6%84%9F/</link>
+      <pubDate>Fri, 08 Sep 2023 23:59:47 +0800</pubDate>
+      
+      <guid>https://geekhuashan.github.io/posts/read/atomic-habits-%E8%AF%BB%E5%90%8E%E6%84%9F/</guid>
+      <description>改变的契机 作为一个三十多的老父亲，在处理日常的工作和生活中，感到越来越力不从心了，总是觉得好疲惫，在Roam Research上记录的最多的D</description>
+    </item>
+    
+    <item>
+      <title>Getting things done</title>
+      <link>https://geekhuashan.github.io/posts/read/getting-things-done/</link>
+      <pubDate>Sun, 10 Sep 2023 00:07:01 +0800</pubDate>
+      
+      <guid>https://geekhuashan.github.io/posts/read/getting-things-done/</guid>
+      <description>这些阶段共同构成了我们生活中的横向管理系统，而且我们还可以随时向其中添加需要考虑的新事项 #flashcard （1）收集引起我们注意的事务和信息； （2）理清每个</description>
+    </item>
+    
+    <item>
+      <title>⏱ 时间轴</title>
+      <link>https://geekhuashan.github.io/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekhuashan.github.io/archives/</guid>
+      <description>archives</description>
+    </item>
+    
+    <item>
+      <title>🔍 搜索</title>
+      <link>https://geekhuashan.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekhuashan.github.io/search/</guid>
+      <description>search</description>
+    </item>
+    
+    <item>
+      <title>🙋🏻‍♂️关于</title>
+      <link>https://geekhuashan.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://geekhuashan.github.io/about/</guid>
+      <description>数据分析学习之路的行者，对学习有着充分的热情 💖🔥 90后，上海211大学，应用化学专业硕士毕业，在一家跨国化工公司的研发部门，高通量配方实验室</description>
     </item>
     
   </channel>
