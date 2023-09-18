@@ -30,7 +30,7 @@ weight = 1
   imageWidth = 150
   imageHeight = 150
 
-    [[llanguages.zh.params.profileMode.buttons]]
+    [[languages.zh.params.profileMode.buttons]]
     name = "👨🏻‍💻技术"
     url = "posts/tech"
 
