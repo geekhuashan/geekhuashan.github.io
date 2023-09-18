@@ -1,4 +1,4 @@
-baseURL = 'https://geekhuashan.github.io'
+baseURL = 'http://127.0.0.1:1313/'
 languageCode = 'zh'
 title = '理科生的生活随想 '
 theme = "PaperMod"
@@ -24,21 +24,21 @@ post = "/:title/"
 languageName = "Chinese"
 weight = 1
 
-  [languages.zh.profileMode]
+  [languages.zh.params.profileMode]
   enabled = true
   imageUrl = "img/logo.gif"
   imageWidth = 150
   imageHeight = 150
 
-    [[languages.zh.profileMode.buttons]]
+    [[llanguages.zh.params.profileMode.buttons]]
     name = "👨🏻‍💻技术"
     url = "posts/tech"
 
-    [[languages.zh.profileMode.buttons]]
+    [[languages.zh.params.profileMode.buttons]]
     name = "📕阅读"
     url = "posts/read"
 
-    [[languages.zh.profileMode.buttons]]
+    [[languages.zh.params.profileMode.buttons]]
     name = "🎬生活"
     url = "posts/life"
 
