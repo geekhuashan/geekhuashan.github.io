@@ -7,7 +7,7 @@ draft = false
 categories = ["life", "tech"]
 tags = ["life", "tech"]
 description = ""
-weight = 2
+weight = 1
 hidemeta = false
 +++
 
