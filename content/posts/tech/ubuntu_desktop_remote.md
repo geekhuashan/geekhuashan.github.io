@@ -38,7 +38,7 @@ sudo apt install ubuntu-desktop
 ```
 sudo -i
 adduser huashan
-sudo usermod -a G  huashan
+sudo usermod -a -G  huashan
 ```
 
 ### 1.3 安装xrdp
@@ -101,9 +101,16 @@ port=tcp://:3389
     sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
     ```
     或者
-    ```bash
-     sudo curl -L "https://get.daocloud.io/docker/compose/releases/download//latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    ```
+
+    手动安装
+    手动上传到服务器，然后重命名
+    `mv docker-compose-Linux-x86_64 docker-compose`
+
+    移动到/usr/local/bin目录下
+    `sudo cp docker-compose /usr/local/bin/`
+  
+
+
 
 
      **修改权限**
@@ -237,7 +244,26 @@ For security reason I include TOTP in my installation guide, so be sure to have 
 
 ## 3. 优化措施
 
-### 3.1 优化xrdp连接
+### 3.1 authentication is required to create a color profile
+
+```bash
+sudo nano /etc/polkit-1/localauthority/50-local.d/45-allow-colord.pkla
+```
+
+添加以下内容
+```
+[Allow Colord all Users]
+Identity=unix-user:*
+Action=org.freedesktop.color-manager.create-device;org.freedesktop.color-manager.create-profile;org.freedesktop.color-manager.delete-device;org.freedesktop.color-manager.delete-profile;org.freedesktop.color-manager.modify-device;org.freedesktop.color-manager.modify-profile
+ResultAny=no
+ResultInactive=no
+ResultActive=yes
+```
+
+
+
+
+### 3.2 优化xrdp连接
 
 #### 调整 Xrdp 配置参数
 编辑 `vi /etc/xrdp/xrdp.ini`
@@ -270,14 +296,14 @@ net.core.wmem_max = 8388608
 重启 xrdp 服务生效
 `sudo systemctl restart xrdp`
 
-### 3.2 优化ubuntu原生桌面
+### 3.3 优化ubuntu原生桌面
 
 install gnome-tweaks
 
 ```bash
 sudo apt install gnome-tweaks
 ```
-添加配置文件 `vi vim ~/.xsessionrc`
+添加配置文件 `vi  ~/.xsessionrc`
     
 ```bash
 export GNOME_SHELL_SESSION_MODE=ubuntu
@@ -289,3 +315,18 @@ export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
 `sudo systemctl restart xrdp.service`
 
 此时再连接，你就将得到和原生桌面一样的效果了
+
+
+
+
+
+
+
+
+# 参考
+https://zhuanlan.zhihu.com/p/519648451
+https://blog.csdn.net/wu_weijie/article/details/116158271
+https://www.cnblogs.com/pipci/p/16377032.html
+https://krdesigns.com/articles/how-to-install-guacamole-using-docker-step-by-step
+https://devicetests.com/fix-xrdp-login-blank-screen-issues
+
