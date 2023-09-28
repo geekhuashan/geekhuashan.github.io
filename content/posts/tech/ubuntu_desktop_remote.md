@@ -7,7 +7,7 @@ draft = false
 categories = ["life", "tech"]
 tags = ["life", "tech"，"ubuntu","rdp","guacamole","remote desktop"]
 description = ""
-weight = 
+weight = 3
 hidemeta = false
 +++
 
