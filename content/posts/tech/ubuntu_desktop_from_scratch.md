@@ -126,7 +126,10 @@ mv Clash.for.Windows-0.19.12-x64-linux clash
 cd clash
 wget https://cdn.jsdelivr.net/gh/Dreamacro/clash@master/docs/logo.png #下载桌面图表
 vim clash.desktop
+```
+
 #输入下面的内容
+```bash
 [Desktop Entry]
  Name=clash
  Comment=Clash
@@ -175,10 +178,6 @@ sudo mv clash.desktop /usr/share/applications/
 
 
 
-
-
-
-
 ## 4. 优化措施
 
 ### 4.1 authentication is required to create a color profile
@@ -196,9 +195,6 @@ ResultAny=no
 ResultInactive=no
 ResultActive=yes
 ```
-
-
-
 
 ### 4.2 优化xrdp连接
 
