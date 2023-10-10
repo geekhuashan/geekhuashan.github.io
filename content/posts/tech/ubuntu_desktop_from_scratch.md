@@ -20,7 +20,7 @@ hidemeta = false
 2. 由于公司的remote desktop conncetion 由于安全方面的policy，无法进行rdp 连接，所以我想到了通过guacamole来实现远程桌面的连接，这是一个基于html5协议的客户端，其也支持ssh，rdp，vnc等协议。
 3. 然后我尝试着在免费的digital ocean上部署了一个2cpu 4gRAM的小主机，通过查询文档等最终将guacamole 和 ubuntu 以及 gnome 安装在了一起，也能成功运行，但是发现就是最后延迟不能接受，看视频像PPT一样，一帧一帧的
 
-最后我选择了在闲鱼上购买了一年的上海的4cpu-4RAM的主机，然后通过这个主机来实现我的需求
+最后我选择了在闲鱼上购买了一年的上海的4cpu-4RAM的主机，然后通过这个主机来实现我的需求,发现这个主机内存性能完全不够，装了nomachine和chrome之后，基本就废了，后来闲鱼上换了一个4核8G RAM的服务器
 
 # 实现
 
@@ -82,6 +82,7 @@ port=tcp://:3389
 安装中文字体。你可以通过下列命令来安装一种常用的中文字体，如 "WenQuanYi Micro Hei"：
 
 `sudo apt-get install fonts-wqy-microhei`
+
 这将会安装 "WenQuanYi Micro Hei" 字体，这是一种常用的、包含了大量中文字符的字体。
 
 如果你需要安装更多的中文字体，你可以尝试安装 "xfonts-wqy"，这是一个更全面的字体包：
@@ -90,6 +91,26 @@ port=tcp://:3389
 这将会安装 "WenQuanYi Zen Hei" 字体。
 
 重启你的系统或者你的应用程序。安装完成后，你可能需要重启你的电脑或者关闭并重新打开你的应用程序（如浏览器或文本编辑器）以使新安装的字体生效。
+
+#### 微软雅黑
+
+从 Windows 系统中获取微软雅黑字体文件：
+微软雅黑的字体文件名通常为 msyh.ttc 或 msyhbd.ttc（粗体版本）。你可以在 Windows 系统的 C:\Windows\Fonts\ 目录中找到它们。
+
+复制字体文件到 Ubuntu：
+在 Ubuntu 中，你需要以 root 用户身份把这些文件复制到 /usr/share/fonts/truetype/ 目录。你可以使用以下命令：
+
+```bash
+sudo cp /path/to/msyh.ttc /usr/share/fonts/truetype/
+sudo cp /path/to/msyhbd.ttc /usr/share/fonts/truetype/
+```
+请将 /path/to/ 替换为你的字体文件在 Ubuntu 中的实际路径。
+
+更新字体缓存：
+你需要更新 Ubuntu 的字体缓存以使新安装的字体生效。你可以使用以下命令：
+
+`sudo fc-cache -f -v`
+
 
 ### clash 
 
@@ -123,6 +144,7 @@ sudo mv clash.desktop /usr/share/applications/
 
 
 ### chrome
+
 下载chrome
 `wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
 
@@ -145,6 +167,9 @@ sudo mv clash.desktop /usr/share/applications/
 `sudo apt install libgsettings-qt1`
 
 ### vscode
+
+官网下载vscode的deb 版本
+`sudo dpkg -i ` 安装
 
 ### zotero
 
