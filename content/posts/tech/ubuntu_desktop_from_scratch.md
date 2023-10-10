@@ -31,7 +31,8 @@ hidemeta = false
 ```
 sudo apt update
 sudo apt upgrade
-sudo apt install ubuntu-desktop
+sudo apt install xfce4 #安装轻量级桌面
+sudo apt install ubuntu-desktop #安装gnome桌面系统
 ```
 ### 1.2 添加新用户
 
@@ -67,9 +68,28 @@ port=tcp://:3389
 `wget https://download.nomachine.com/download/8.9/Linux/nomachine_8.9.1_1_amd64.deb`
 
 安装 nomachine
-` sudo dpkg -i nomachine_8.9.1_1_amd64.deb`
+`sudo dpkg -i nomachine_8.9.1_1_amd64.deb`
 
 ## 3. 安装常用软件
+
+### 中文字体包
+
+输入以下命令以更新你的包列表：
+
+`sudo apt-get update`
+输入你的密码后，系统将开始更新你的包列表。
+
+安装中文字体。你可以通过下列命令来安装一种常用的中文字体，如 "WenQuanYi Micro Hei"：
+
+`sudo apt-get install fonts-wqy-microhei`
+这将会安装 "WenQuanYi Micro Hei" 字体，这是一种常用的、包含了大量中文字符的字体。
+
+如果你需要安装更多的中文字体，你可以尝试安装 "xfonts-wqy"，这是一个更全面的字体包：
+
+`sudo apt-get install xfonts-wqy``
+这将会安装 "WenQuanYi Zen Hei" 字体。
+
+重启你的系统或者你的应用程序。安装完成后，你可能需要重启你的电脑或者关闭并重新打开你的应用程序（如浏览器或文本编辑器）以使新安装的字体生效。
 
 ### clash 
 
@@ -98,14 +118,31 @@ vim clash.desktop
 
 sudo mv clash.desktop /usr/share/applications/
 ```
-然后打开更多应用，里面就有了 
+然后打开更多应用，里面就有了
 
 
 
 ### chrome
-下载好chrome 之后 `sudo dpkg -i xxxx.deb` 安装即可
+下载chrome
+`wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`
+
+下载好chrome 之后  安装即可
+`sudo dpkg -i google-chrome-stable_current_amd64.deb`
+
+如果出现依赖性问题，你可以使用以下命令来解决：
+
+`sudo apt-get install -f`
 
 ### 输入法
+
+下载搜狗输入法 `wget https://ime-sec.gtimg.com/202310100937/a3b737ecf4bdea9fa36fea1295db9d4d/pc/dl/gzindex/1680521603/sogoupinyin_4.2.1.145_amd64.deb`
+安装 
+`sudo dpkg -i sogoupinyin_4.2.1.145_amd64.deb`
+
+安装依赖
+`sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2`
+
+`sudo apt install libgsettings-qt1`
 
 ### vscode
 
