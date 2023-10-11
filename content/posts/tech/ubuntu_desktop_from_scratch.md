@@ -44,25 +44,9 @@ sudo usermod -aG sudo huashan
 
 
 
-## 2. 安装远程控制环境
+## 2. 安装远程控制环境以及分辨率设置
 
-### 2.1 安装xrdp
-
-```
-sudo apt install xrdp
-sudo systemctl status xrdp
-sudo nano /etc/xrdp/xrdp.ini
-```
-修改：
-port=tcp://:3389
-
-`sudo systemctl restart xrdp`
-
-### 防火墙开放3389端口
-
-```sudo ufw allow 3389```
-
-### 2.2 安装 nomachine
+### 2.1 安装 nomachine
 
 下载 nomachine
 `wget https://download.nomachine.com/download/8.9/Linux/nomachine_8.9.1_1_amd64.deb`
@@ -70,14 +54,16 @@ port=tcp://:3389
 安装 nomachine
 `sudo dpkg -i nomachine_8.9.1_1_amd64.deb`
 
-### 2.3 更改分辨率
+### 2.2 更改分辨率
+
+#### XROG
 
 在想要远程Ubuntu Server去完成VNC或者NoMachine的时候，由于没有接显示器，会导致无法显示。需要虚拟一个桌面，以供操作。
 
 安装虚拟桌面
 `sudo apt-get install xserver-xorg-video-dummy`
 
-配置 /usr/share/X11/xorg.conf.d/xorg.conf
+配置 `sudo vi /usr/share/X11/xorg.conf.d/xorg.conf`
 ```
 Section "Monitor"
   Identifier "Monitor0"
@@ -106,6 +92,12 @@ Section "Screen"
 EndSection
 ```
 
+#### WYLAND
+失败了，参考文章这个，以后再试试
+https://askubuntu.com/questions/973499/wayland-how-to-set-a-custom-resolution
+
+
+
 3. 重启
 
 
@@ -120,7 +112,7 @@ EndSection
 
 安装中文字体。你可以通过下列命令来安装一种常用的中文字体，如 "WenQuanYi Micro Hei"：
 
-`sudo apt-get install fonts-wqy-microhei`
+`sudo apt-get install fonts-wqy-microhei xfonts-wqy`
 
 这将会安装 "WenQuanYi Micro Hei" 字体，这是一种常用的、包含了大量中文字符的字体。
 
@@ -199,6 +191,12 @@ sudo mv clash.desktop /usr/share/applications/
 
 ### 输入法
 
+首先安装 fcitx
+`sudo apt-get install fcitx`
+
+卸载ibus 
+`sudo apt-get remove ibus`
+
 下载搜狗输入法 `wget https://ime-sec.gtimg.com/202310100937/a3b737ecf4bdea9fa36fea1295db9d4d/pc/dl/gzindex/1680521603/sogoupinyin_4.2.1.145_amd64.deb`
 安装 
 `sudo dpkg -i sogoupinyin_4.2.1.145_amd64.deb`
@@ -207,6 +205,9 @@ sudo mv clash.desktop /usr/share/applications/
 `sudo apt install libqt5qml5 libqt5quick5 libqt5quickwidgets5 qml-module-qtquick2`
 
 `sudo apt install libgsettings-qt1`
+
+设置开机启动
+`sudo cp /usr/share/applications/fcitx.desktop /etc/xdg/autostart/`
 
 ### vscode
 
