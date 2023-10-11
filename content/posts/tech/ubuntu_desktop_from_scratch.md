@@ -70,6 +70,7 @@ port=tcp://:3389
 安装 nomachine
 `sudo dpkg -i nomachine_8.9.1_1_amd64.deb`
 
+
 ## 3. 安装常用软件
 
 ### 中文字体包
