@@ -70,6 +70,44 @@ port=tcp://:3389
 安装 nomachine
 `sudo dpkg -i nomachine_8.9.1_1_amd64.deb`
 
+### 2.3 更改分辨率
+
+在想要远程Ubuntu Server去完成VNC或者NoMachine的时候，由于没有接显示器，会导致无法显示。需要虚拟一个桌面，以供操作。
+
+安装虚拟桌面
+`sudo apt-get install xserver-xorg-video-dummy`
+
+配置 /usr/share/X11/xorg.conf.d/xorg.conf
+```
+Section "Monitor"
+  Identifier "Monitor0"
+  HorizSync   5.0 - 1000.0
+  VertRefresh 5.0 - 200.0
+  # https://arachnoid.com/modelines/
+  # 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz
+  Modeline "1920x1080" 23.53 1920 1952 2040 2072 1080 1106 1108 1135
+EndSection
+
+Section "Device"
+  Identifier "Card0"
+  Driver "dummy"
+  VideoRam 256000
+EndSection
+
+Section "Screen"
+  DefaultDepth 24
+  Identifier "Screen0"
+  Device "Card0"
+  Monitor "Monitor0"
+  SubSection "Display"
+    Depth 24
+    Modes  "1920x1080"
+  EndSubSection
+EndSection
+```
+
+3. 重启
+
 
 ## 3. 安装常用软件
 
