@@ -1,5 +1,5 @@
 +++
-title = 'ubuntu 远程桌面从头开始' 
+title = 'ubuntu个人远程桌面从头开始' 
 date = 2023-09-27T20:57:43+08:00
 lastmod = 2023-09-27T20:57:43+08:00
 author = ["geekhuashan"]
@@ -7,20 +7,20 @@ draft = false
 categories = ["life", "tech"]
 tags = ["life", "tech", "ubuntu", "rdp", "guacamole", "remote desktop"]
 description = ""
-weight = 3
+weight = 4
 hidemeta = false
 +++
 
 
 # 需求
 
-由于公司电脑的限制，我无法安装很多的软件，比如说，我无法安装微信，无法安装QQ，无法安装微博，无法安装一些有趣的东西，而我想到的是拥有一台完全属于自己的主机
+由于公司电脑的限制，我无法安装很多的软件，无法自由的访问一些我需要的网站，比如chatgpt，gmail等，限制太多，监控太多，而我想到的是拥有一台完全属于自己的主机，完全由我自己掌控的电脑。
 
 1. 通过这台主机，我可以在公司使用微信，完全属于自己的chrome浏览器，装好各种插件，实现自己的需求
-2. 由于公司的remote desktop conncetion 由于安全方面的policy，无法进行rdp 连接，所以我想到了通过guacamole来实现远程桌面的连接，这是一个基于html5协议的客户端，其也支持ssh，rdp，vnc等协议。
-3. 然后我尝试着在免费的digital ocean上部署了一个2cpu 4gRAM的小主机，通过查询文档等最终将guacamole 和 ubuntu 以及 gnome 安装在了一起，也能成功运行，但是发现就是最后延迟不能接受，看视频像PPT一样，一帧一帧的
-
-最后我选择了在闲鱼上购买了一年的上海的4cpu-4RAM的主机，然后通过这个主机来实现我的需求,发现这个主机内存性能完全不够，装了nomachine和chrome之后，基本就废了，后来闲鱼上换了一个4核8G RAM的服务器
+   
+2. 由于公司的remote desktop conncetion 由于安全方面的policy，无法进行rdp 连接，所以我想到了通过guacamole来实现远程桌面的连接，这是一个基于html5协议的客户端，其也支持ssh，rdp，vnc等协议。但是发现这个延迟实在是无法接受，找了一圈之后，都说 nomachine 是最好的，所以我想到了通过nomachine来实现远程桌面的连接。另一方面，公司的软件中心也有这个软件，我可以不违反公司的policy，也能安装这个软件，虽然版本是旧的，但是无所谓啊，能用就行。
+  
+3. 然后我尝试着在免费的digital ocean上部署了一个2cpu 4gRAM的小主机，通过查询文档等最终将guacamole 和 ubuntu 以及 gnome 安装在了一起，也能成功运行，但是发现就是最后延迟不能接受，看视频像PPT一样，一帧一帧的。最后我选择了在闲鱼上购买了一年的上海的4cpu-4RAM的主机，然后通过这个主机来实现我的需求,发现这个主机内存性能完全不够，装了nomachine和chrome之后，基本就废了，后来闲鱼上换了一个4核8G RAM的服务器，这个服务器，再我装了gnome，chrome，vscode,zotero之后，不是一下子全开软件的话，运行的还比较流畅的。
 
 # 实现
 
@@ -42,8 +42,6 @@ adduser huashan
 sudo usermod -aG sudo huashan
 ```
 
-
-
 ## 2. 安装远程控制环境以及分辨率设置
 
 ### 2.1 安装 nomachine
@@ -64,14 +62,16 @@ sudo usermod -aG sudo huashan
 `sudo apt-get install xserver-xorg-video-dummy`
 
 配置 `sudo vi /usr/share/X11/xorg.conf.d/xorg.conf`
-```
+
+```bash
 Section "Monitor"
   Identifier "Monitor0"
   HorizSync   5.0 - 1000.0
   VertRefresh 5.0 - 200.0
   # https://arachnoid.com/modelines/
   # 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz
-  Modeline "1920x1080" 23.53 1920 1952 2040 2072 1080 1106 1108 1135
+  Modeline "1920x1080" 173.00  1920 2048 2248 2576  1080 1083 1088 1120 
+
 EndSection
 
 Section "Device"
@@ -91,19 +91,18 @@ Section "Screen"
   EndSubSection
 EndSection
 ```
+重启系统
 
 #### WYLAND
 失败了，参考文章这个，以后再试试
 https://askubuntu.com/questions/973499/wayland-how-to-set-a-custom-resolution
 
 
-
-3. 重启
-
-
 ## 3. 安装常用软件
 
 ### 中文字体包
+
+#### 一般的开源中文字体
 
 输入以下命令以更新你的包列表：
 
@@ -142,6 +141,9 @@ sudo cp /path/to/msyhbd.ttc /usr/share/fonts/truetype/
 
 `sudo fc-cache -f -v`
 
+如果字体选择器那里显示的是乱码，方框之类的，需要给字体文件设置权限
+`sudo chmod 644 /usr/share/fonts/truetype/msyh.ttc`
+
 
 ### clash 
 
@@ -159,7 +161,7 @@ wget https://cdn.jsdelivr.net/gh/Dreamacro/clash@master/docs/logo.png #下载桌
 vim clash.desktop
 ```
 
-#输入下面的内容
+输入下面的内容
 ```bash
 [Desktop Entry]
  Name=clash
@@ -174,8 +176,6 @@ vim clash.desktop
 sudo mv clash.desktop /usr/share/applications/
 ```
 然后打开更多应用，里面就有了
-
-
 
 ### chrome
 
@@ -209,12 +209,70 @@ sudo mv clash.desktop /usr/share/applications/
 设置开机启动
 `sudo cp /usr/share/applications/fcitx.desktop /etc/xdg/autostart/`
 
-### vscode
+### Vscode
 
 官网下载vscode的deb 版本
 `sudo dpkg -i ` 安装
 
+#### 设置 SOCKS 代理, 
+
+确保插件使用代理，这样就可以非常顺畅的使用copilot了
+在 VS Code 的设置中，你可以为 HTTP Proxy 输入 SOCKS 代理地址。例如，如果 Clash 的 SOCKS 代理设置为 127.0.0.1:7890，则你可以输入 socks5://127.0.0.1:7890。
+
+确保插件使用代理
+VS Code 的大部分网络活动（包括插件管理和更新）都会遵循你在“HTTP Proxy”设置中定义的代理。但为确保所有网络请求都通过代理，http.proxySupport: 设置为 on，以确保插件也使用代理。
+
+修改设置后，关闭并重新启动 VS Code 以确保设置生效。
+
+这样，你的 VS Code 和其中的插件都应该能够通过 Clash 的 SOCKS 代理进行网络访问。
+
 ### zotero
+
+在 Ubuntu 上安装 Zotero 的步骤：
+
+1. **下载 tarball**
+
+   首先，从 Zotero 的官方网站下载 tarball。
+
+2. **解压 tarball**
+
+   假设你已经下载了 tarball 并将其保存为 `zotero.tar.bz2`，你可以使用以下命令解压它：
+
+   ```bash
+   tar -xvf zotero.tar.bz2
+   ```
+
+3. **移动解压后的目录**
+
+   将解压后的目录移动到你选择的位置。在这里，我们选择 `/home/huashan/app` 目录：
+
+   ```bash
+   sudo mv zotero /home/huasshan/app
+   ```
+
+4. **更新 .desktop 文件**
+
+   .desktop 文件需要图标的绝对路径。运行 `set_launcher_icon` 脚本来更新 .desktop 文件：
+
+   ```bash
+   cd /home/huashan/app/zotero/
+   ./set_launcher_icon
+   ```
+
+5. **创建符号链接**
+
+   最后，创建一个符号链接到 `~/.local/share/applications/` 以将 Zotero 添加到启动器：
+
+   ```bash
+   ln -s /home/huashan/app/zotero/zotero.desktop ~/.local/share/applications/zotero.desktop
+   ```
+
+6. **启动 Zotero**
+
+   现在，Zotero 应该出现在你的启动器或当你点击网格图标（“显示应用程序”）时的应用程序列表中。你可以从那里将其拖到启动器上。
+
+完成以上步骤后，你应该可以正常使用 Zotero 了。如果在安装过程中遇到任何问题，请告诉我，我会帮助你解决。
+
 
 
 
