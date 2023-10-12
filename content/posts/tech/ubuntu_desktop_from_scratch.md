@@ -1,7 +1,7 @@
 +++
 title = 'ubuntu个人远程桌面从头开始' 
-date = 2023-09-27T20:57:43+08:00
-lastmod = 2023-09-27T20:57:43+08:00
+date = 2023-10-11T20:57:43+08:00
+lastmod = 2023-10-11T20:57:43+08:00
 author = ["geekhuashan"]
 draft = false
 categories = ["life", "tech"]
@@ -74,6 +74,7 @@ Section "Monitor"
   # https://arachnoid.com/modelines/
   # 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz
   Modeline "1920x1080" 173.00  1920 2048 2248 2576  1080 1083 1088 1120 
+  Modeline "3000x2000" 514.00  3000 3240 3568 4136  2000 2003 2013 2072
 
 EndSection
 
@@ -90,7 +91,7 @@ Section "Screen"
   Monitor "Monitor0"
   SubSection "Display"
     Depth 24
-    Modes  "1920x1080"
+    Modes  "1920x1080" "3000x2000"
   EndSubSection
 EndSection
 ```
