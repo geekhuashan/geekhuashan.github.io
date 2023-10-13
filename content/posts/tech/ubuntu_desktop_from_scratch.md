@@ -62,7 +62,9 @@ sudo usermod -aG sudo huashan
 在想要远程Ubuntu Server去完成VNC或者NoMachine的时候，由于没有接显示器，会导致无法显示。需要虚拟一个桌面，以供操作。
 
 安装虚拟桌面
+`sudo apt-get update`
 `sudo apt-get install xserver-xorg-video-dummy`
+`sudo apt-get install  xserver-xorg-core-hwe-18.04`
 
 配置 `sudo vi /usr/share/X11/xorg.conf.d/xorg.conf`
 
@@ -72,9 +74,12 @@ Section "Monitor"
   HorizSync   5.0 - 1000.0
   VertRefresh 5.0 - 200.0
   # https://arachnoid.com/modelines/
-  # 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz
+  # 1920x1080 @ 60.00 Hz (GTF) hsync: 67.08 kHz; pclk: 172.80 MHz for most of display
   Modeline "1920x1080" 173.00  1920 2048 2248 2576  1080 1083 1088 1120 
-  Modeline "3000x2000" 514.00  3000 3240 3568 4136  2000 2003 2013 2072
+  # 3000x2000 @ 30 Hz (CVT) hsync: 67.08 kHz; pclk: 172.80 MHz for pixel slate
+  Modeline "3000x2000" 243.75  3000 3184 3496 3992  2000 2003 2013 2037
+  # 2400x1080 @ 60 Hz (CVT) hsync: 67.08 kHz; pclk: 172.80 MHz for Pixel 6
+  Modeline "2400x1080"  216.00  2400 2552 2808 3216  1080 1083 1093 1120
 
 EndSection
 
@@ -91,10 +96,12 @@ Section "Screen"
   Monitor "Monitor0"
   SubSection "Display"
     Depth 24
-    Modes  "1920x1080" "3000x2000"
+    Modes  "1920x1080" "3000x2000" "2400x1080"
   EndSubSection
 EndSection
 ```
+
+
 重启系统
 
 #### WYLAND
