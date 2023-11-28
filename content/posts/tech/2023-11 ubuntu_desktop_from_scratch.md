@@ -392,11 +392,15 @@ export XDG_CONFIG_DIRS=/etc/xdg/xdg-ubuntu:/etc/xdg
 ### 4.4 优化docker 栏点击效果
 如图标下只有一个窗口，则显示或最小化窗口。
 如图标下有多个窗口则会显示多个窗口的预览，再选择需要的窗口打开。
-`gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews`
+`gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize-or-previews'`
 
+### 4.5 删除不要的软件
+```bash
+sudo apt-get remove libreoffice-common
 
+sudo apt-get remove thunderbird totem rhythmbox simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-sudoku
 
-
+```
 
 # 参考
 https://zhuanlan.zhihu.com/p/519648451
