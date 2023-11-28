@@ -250,6 +250,23 @@ VS Code 的大部分网络活动（包括插件管理和更新）都会遵循你
 
 这样，你的 VS Code 和其中的插件都应该能够通过 Clash 的 SOCKS 代理进行网络访问。
 
+#### 远程访问 ssh 连接
+
+1. 在本地机器生成密钥对(公钥+私钥)：ssh-keygen
+2. 私钥放本机，公钥放远程(~/.ssh路径下)
+3. 在远程机器用公钥生成authorized_keys：
+- 进入home目录下的.ssh文件夹：cd ~/.ssh
+- cat id_rsa.pub >> authorized_keys
+4. vscode config文件加入本机私钥路径
+- IdentityFile “C:\Users\QUWS\.ssh\id_rsa”
+
+如果没有反应，在remote vps 上执行以下命令
+```bash
+chmod 700 ~/.ssh
+chmod 600 ~/.ssh/authorized_keys
+```
+原因是SSH 不希望用户目录和~/.ssh目录对组有写权限。
+
 ### zotero
 
 在 Ubuntu 上安装 Zotero 的步骤：
